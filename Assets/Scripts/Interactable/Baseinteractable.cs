@@ -14,15 +14,14 @@ public abstract class BaseInteractable : MonoBehaviour
     {
         if(!col.CompareTag("Player")) return;
         // We do this because the triggers will be overlapping between interactables, this ensures the player can only interact with the one they're looking at
-        if(!IsBeingLookedAt()) return;
+        if(!IsBeingLookedAt(col.gameObject)) return;
         // We pass the collider through as it makes extra checks on the interactables script easier (and well possible lmao)
         Interact(col);
     }
-    public bool IsBeingLookedAt()
+    public bool IsBeingLookedAt(GameObject player)
     {
         // This function sends a ray cast out of the centre of the players camera, and if it collides with this object (the interactable this script is attached to) it returns true.
-        Ray CameraRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        if(Physics.Raycast(CameraRay, out RaycastHit hit))
+        if(Physics.Raycast(player.transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hit, Mathf.Infinity))
             return hit.collider.gameObject == gameObject;
         else return false;
     }

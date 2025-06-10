@@ -13,11 +13,4 @@ public class ItemCrate : BaseInteractable
             if(PlayerHolding.currentlyHeldItem != item) PlayerHolding.currentlyHeldItem = item;
         }
     }
-    void Awake()
-    {
-        /* It makes sense to add every single item in an item crate to the valid items list, as it would be pointless to have an item crate which interactables refuse to take as its invalid, 
-        this just prevents that use error bug */
-        CustomerManager.validItems.Add(item);
-    }
-
 }

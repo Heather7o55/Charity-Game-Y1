@@ -36,8 +36,6 @@ public class Furnace : BaseInteractable
         else 
         {
             internalItem = internalItem.nextState;
-            
         }
     }
-
 }
