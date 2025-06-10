@@ -4,7 +4,6 @@ using System.Linq;
 using Unity.Mathematics;
 using UnityEditor.PackageManager.Requests;
 using UnityEngine;
-
 public class CustomerTable : BaseInteractable
 {
     private List<Item> internalItems = new List<Item>();
@@ -52,6 +51,5 @@ public class CustomerTable : BaseInteractable
             CustomerManager.requests.RemoveAt(requestOverSoonest);
             internalItems.RemoveAt(item);
         }
-        
     }
 }
