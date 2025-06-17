@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PBullet
   - BulletHolder
+  - Wall
+  - EBullet
   layers:
   - Default
   - TransparentFX

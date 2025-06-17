@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
       private Vector3 moveDirection;
       public float horizontalInput;
       public int moveSpeed = 10;
+      static bool Stunned = true;
     void Update()
     {
         UpdateMovement();
@@ -14,10 +15,31 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateMovement()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
+        if (Stunned == true)
+        {
+             horizontalInput = Input.GetAxis("Horizontal");
+             transform.Translate(-Vector3.right*Time.deltaTime * horizontalInput* moveSpeed);
+        }
+       
 
-        transform.Translate(-Vector3.right*Time.deltaTime * horizontalInput* moveSpeed) ;
+    }
 
+     void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("EBullet"))
+        {
+            StunnedEffect();
+        }
+    }
+
+    public IEnumerator StunnedEffect()
+    {
+        Stunned = false;
+        yield return new WaitForSeconds(2);
+        Stunned = true;
+        moveSpeed = moveSpeed/2;
+        yield return new WaitForSeconds(2);
+        moveSpeed = moveSpeed*2;
 
     }
      
