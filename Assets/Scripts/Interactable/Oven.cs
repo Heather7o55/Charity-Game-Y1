@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEditor;
 using UnityEngine;
-public class Furnace : BaseInteractable
+public class Oven : BaseInteractable
 {
     private Item internalItem;
     // Interact is called every physics update, serving the same function for interactables as update does in other scripts

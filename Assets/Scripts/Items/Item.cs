@@ -11,4 +11,5 @@ public class Item : ScriptableObject
     public GameObject model;
     public int ID;
     public Item nextState;
+    public Recipe[] recipes;
 }

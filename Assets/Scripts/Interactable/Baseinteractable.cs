@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 public abstract class BaseInteractable : MonoBehaviour
 {
     public List<Item> validItems = new List<Item>();
     public float interactableTimer;
     public bool timerActive;
+    public Item[] InternalItems;
+    public Recipe.Station station;
     public static Item empty;
     public static Item sludge;
     private void OnTriggerStay(Collider col)
@@ -28,7 +31,8 @@ public abstract class BaseInteractable : MonoBehaviour
     public bool ValidatePlayerItem(Item item)
     // We do this here as this is universally used across interactables
     {
-        return validItems.Any(Item => Item == item);
+        return item.recipes.Any(recipes => recipes.stations.Any(Station => Station == station));
+        // return validItems.Any(Item => Item == item);
     }
     public IEnumerator StartTimer(float timer)
     {
