@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Unity.Mathematics;
-using UnityEditor.PackageManager.Requests;
+using Unity.VisualScripting;
 using UnityEngine;
-public class CustomerTable : BaseInteractable
+public class CustomerTable : Interactable
 {
     private List<Item> internalItems = new List<Item>();
     public override void Interact(Collider col)
@@ -23,6 +21,7 @@ public class CustomerTable : BaseInteractable
     }
     private void CheckValidItem()
     {
+        // MISERY NIGHTMARE FUNCTION T-T
         int requestOverSoonest = -1;
         float timeLeft = 0f;
         int item = -1;

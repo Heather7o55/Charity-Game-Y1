@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
-public abstract class BaseInteractable : MonoBehaviour
+public abstract class Interactable : MonoBehaviour
 {
     public List<Item> validItems = new List<Item>();
     public float interactableTimer;
@@ -31,8 +29,16 @@ public abstract class BaseInteractable : MonoBehaviour
     public bool ValidatePlayerItem(Item item)
     // We do this here as this is universally used across interactables
     {
-        return item.recipes.Any(recipes => recipes.stations.Any(Station => Station == station));
+        return item.recipeTables.Any(recipes => recipes.validStations.Any(Station => Station == station));
         // return validItems.Any(Item => Item == item);
+    }
+    public Item ValidateRecipe(Item[] items)
+    {
+        foreach(Recipe recipe in items[0].recipeTables)
+        {
+            if(recipe.requirements == items) return recipe.output;
+        }
+        return empty;
     }
     public IEnumerator StartTimer(float timer)
     {
