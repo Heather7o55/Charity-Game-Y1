@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CounterTop : BaseInteractable
+public class CounterTop : Interactable
 {
     public List<Item> items = new List<Item>();
     public override void Interact(Collider col)

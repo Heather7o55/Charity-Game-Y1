@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     {
         UpdateMovement();
     }
-
     private void UpdateMovement()
     {
         if (Stunned == true)

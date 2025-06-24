@@ -13,7 +13,7 @@ public class Recipe : ScriptableObject
         CounterTop,
         Crate
     }
-    public Station[] stations;
+    public Station[] validStations;
     public Item[] requirements;
     public Item output;
 }
