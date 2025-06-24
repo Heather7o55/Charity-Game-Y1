@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
       public float horizontalInput;
       public int moveSpeed = 10;
       static bool Stunned = true;
+      public static bool ParryActive;
     void Update()
     {
         UpdateMovement();
@@ -20,7 +21,10 @@ public class PlayerMovement : MonoBehaviour
              horizontalInput = Input.GetAxis("Horizontal");
              transform.Translate(-Vector3.right*Time.deltaTime * horizontalInput* moveSpeed);
         }
-       
+       if(Input.GetKeyDown(KeyCode.Space))
+       {
+        Parry();
+       }
 
     }
 
@@ -42,6 +46,14 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = moveSpeed*2;
 
     }
+     public IEnumerator Parry()
+     {
+        ParryActive = true;
+        yield return new WaitForSeconds(1);
+        ParryActive = false;
+
+     }
+
      
 
     

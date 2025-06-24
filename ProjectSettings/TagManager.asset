@@ -8,6 +8,7 @@ TagManager:
   - BulletHolder
   - Wall
   - EBullet
+  - ParrySpot
   layers:
   - Default
   - TransparentFX
