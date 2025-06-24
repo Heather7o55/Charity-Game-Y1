@@ -18,31 +18,21 @@ public class PlayerMovement : MonoBehaviour
         if (Stunned == true)
         {
             horizontalInput = Input.GetAxis("Horizontal");
-             transform.Translate(-Vector3.right*Time.deltaTime * horizontalInput* moveSpeed);
+            transform.Translate(-Vector3.right*Time.deltaTime * horizontalInput* moveSpeed);
         }
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Parry();
         }
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("EBullet"))
-        {
-            StunnedEffect();
-        }
-    }
-
     public IEnumerator StunnedEffect()
     {
         Stunned = false;
         yield return new WaitForSeconds(2);
         Stunned = true;
-        moveSpeed = moveSpeed/2;
+        moveSpeed /= 2;
         yield return new WaitForSeconds(2);
-        moveSpeed = moveSpeed*2;
-
+        moveSpeed *= 2;
     }
     public IEnumerator Parry()
     {

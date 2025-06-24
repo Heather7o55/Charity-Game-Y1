@@ -17,13 +17,13 @@ public class EBullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        if (other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player"))
         {  
-            if (PlayerMovement.ParryActive)
+            if(PlayerMovement.ParryActive)
             {
                 GetComponent<Rigidbody>().AddForce(ParrySpot.transform.forward * EBulletSpeed,ForceMode.Impulse);
             }
-            if (!PlayerMovement.ParryActive)
+            if(!PlayerMovement.ParryActive)
             {
                 pm = other.GetComponent<PlayerMovement>();
                 if(pm != null)
