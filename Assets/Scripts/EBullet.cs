@@ -7,32 +7,28 @@ public class EBullet : MonoBehaviour
 {
     // Start is called before the first frame update
     PlayerMovement pm;
-    static bool ParryActive;
     public GameObject ParrySpot;
     public float EBulletSpeed = 30f; 
 
     void Start()
     {
-        ParrySpot = (GameObject.FindWithTag("ParrySpot"));
+        ParrySpot = GameObject.FindWithTag("ParrySpot");
     }
-  
-
     private void OnTriggerEnter(Collider other)
     {
         
         if (other.gameObject.CompareTag("Player"))
         {  
-            if (ParryActive == true)
+            if (PlayerMovement.ParryActive)
             {
-                this.GetComponent<Rigidbody>().AddForce(ParrySpot.transform.forward * EBulletSpeed,ForceMode.Impulse);
+                GetComponent<Rigidbody>().AddForce(ParrySpot.transform.forward * EBulletSpeed,ForceMode.Impulse);
             }
-            if (ParryActive != true)
+            if (!PlayerMovement.ParryActive)
             {
                 pm = other.GetComponent<PlayerMovement>();
                 if(pm != null)
                 {
-                  StartCoroutine(pm.StunnedEffect());  
-
+                StartCoroutine(pm.StunnedEffect());  
                 }
             }
             else
@@ -40,7 +36,4 @@ public class EBullet : MonoBehaviour
             
         }
     }
-
 }
-    
-       

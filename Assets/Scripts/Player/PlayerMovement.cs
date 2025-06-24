@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-      private Vector3 moveDirection;
-      public float horizontalInput;
-      public int moveSpeed = 10;
-      static bool Stunned = true;
-      public static bool ParryActive;
+    private Vector3 moveDirection;
+    public float horizontalInput;
+    public int moveSpeed = 10;
+    static bool Stunned = true;
+    public static bool ParryActive;
     void Update()
     {
         UpdateMovement();
@@ -17,17 +17,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Stunned == true)
         {
-             horizontalInput = Input.GetAxis("Horizontal");
+            horizontalInput = Input.GetAxis("Horizontal");
              transform.Translate(-Vector3.right*Time.deltaTime * horizontalInput* moveSpeed);
         }
-       if(Input.GetKeyDown(KeyCode.Space))
-       {
-        Parry();
-       }
-
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Parry();
+        }
     }
 
-     void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("EBullet"))
         {
@@ -45,15 +44,10 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = moveSpeed*2;
 
     }
-     public IEnumerator Parry()
-     {
+    public IEnumerator Parry()
+    {
         ParryActive = true;
         yield return new WaitForSeconds(1);
         ParryActive = false;
-
-     }
-
-     
-
-    
+    }
 }
