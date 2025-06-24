@@ -22,7 +22,7 @@ public abstract class Interactable : MonoBehaviour
     public bool IsBeingLookedAt(GameObject player)
     {
         // This function sends a ray cast out of the centre of the players camera, and if it collides with this object (the interactable this script is attached to) it returns true.
-        if(Physics.Raycast(player.transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hit, Mathf.Infinity))
+        if(Physics.Raycast(player.transform.position, transform.TransformDirection(Vector3.back), out RaycastHit hit, Mathf.Infinity))
             return hit.collider.gameObject == gameObject;
         else return false;
     }
@@ -31,6 +31,10 @@ public abstract class Interactable : MonoBehaviour
     {
         return PlayerHolding.currentlyHeldItem.recipeTables.Any(recipes => recipes.validStations.Any(Station => Station == station));
         // return validItems.Any(Item => Item == item);
+    }
+    public bool ValidateItem(Item item)
+    {
+        return item.recipeTables.Any(recipes => recipes.validStations.Any(Station => Station == station));
     }
     public Item ValidateRecipe(Item[] items)
     {

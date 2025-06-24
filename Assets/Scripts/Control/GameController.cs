@@ -12,8 +12,8 @@ public class GameController : MonoBehaviour
     void Awake()
     {
         CustomerManager.ResetCustomerManager();
-        BaseInteractable.empty = empty;
-        BaseInteractable.sludge = sludge;
+        Interactable.empty = empty;
+        Interactable.sludge = sludge;
         DifficultyController.difficulty.high = 30;
         DifficultyController.difficulty.low = 20;
         foreach(Item i in validItems)

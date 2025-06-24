@@ -16,7 +16,7 @@ public class Oven : Interactable
         if(Input.GetKey(KeyCode.E))
         {
             if(PlayerHolding.currentlyHeldItem == internalItem) return;
-            if(ValidatePlayerItem(PlayerHolding.currentlyHeldItem))
+            if(ValidatePlayerItem())
             {
                 (PlayerHolding.currentlyHeldItem, internalItem) = (internalItem, PlayerHolding.currentlyHeldItem);
                 StartCoroutine(StartTimer(interactableTimer));
@@ -27,7 +27,7 @@ public class Oven : Interactable
     public void Update()
     {
         // We do this in update as this logic needs to run independently of when the player is interacting with the object 
-        if(internalItem == empty || internalItem == sludge || !ValidatePlayerItem(internalItem))
+        if(internalItem == empty || internalItem == sludge || !ValidateItem(internalItem))
         {
             timerActive = false;
             return;
