@@ -9,7 +9,7 @@ public class Basin : Interactable
     {
         // as stated before interact runs every physics tick so we can in effect use it as a sudo-update, in this case we just  check if the player is holding E and if they are give them the item in the crate.
         if(!Input.GetKey(KeyCode.E)) return;
-        if(!ValidatePlayerItem(PlayerHolding.currentlyHeldItem)) return;
+        if(!ValidatePlayerItem()) return;
         Item[] itemArray = {PlayerHolding.currentlyHeldItem, item};
         Item tmpItem = ValidateRecipe(itemArray);
         PlayerHolding.currentlyHeldItem = (tmpItem == empty) ? PlayerHolding.currentlyHeldItem : tmpItem;

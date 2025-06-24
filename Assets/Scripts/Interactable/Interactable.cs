@@ -26,10 +26,10 @@ public abstract class Interactable : MonoBehaviour
             return hit.collider.gameObject == gameObject;
         else return false;
     }
-    public bool ValidatePlayerItem(Item item)
+    public bool ValidatePlayerItem()
     // We do this here as this is universally used across interactables
     {
-        return item.recipeTables.Any(recipes => recipes.validStations.Any(Station => Station == station));
+        return PlayerHolding.currentlyHeldItem.recipeTables.Any(recipes => recipes.validStations.Any(Station => Station == station));
         // return validItems.Any(Item => Item == item);
     }
     public Item ValidateRecipe(Item[] items)
