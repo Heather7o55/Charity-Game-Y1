@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public int moveSpeed = 10;
     static bool Stunned = true;
     public static bool ParryActive;
+    
     void Update()
     {
         UpdateMovement();
