@@ -5,7 +5,7 @@ using UnityEngine;
 public class EShooting : MonoBehaviour
 {
     // Start is called before the first frame update
-        public float EBulletSpeed; 
+    public float EBulletSpeed; 
     public Transform EBulletPrefabSpawn;
     public GameObject EBulletPrefab;
     PlayerMovement Pm;

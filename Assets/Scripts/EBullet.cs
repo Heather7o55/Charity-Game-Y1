@@ -8,6 +8,7 @@ public class EBullet : MonoBehaviour
     PlayerMovement pm;
     public GameObject ParrySpot;
     public float EBulletSpeed = 30f; 
+    
 
     void Start()
     {
@@ -18,13 +19,13 @@ public class EBullet : MonoBehaviour
         
         if(other.gameObject.CompareTag("Player"))
         {  
-            if(PlayerMovement.ParryActive == true)
+            if(PlayerMovement.ParryActive == false)
             {
                 GetComponent<Rigidbody>().velocity = Vector3.zero;
                 
                 GetComponent<Rigidbody>().AddForce(-transform.forward * EBulletSpeed,ForceMode.VelocityChange);
             }
-            if(!PlayerMovement.ParryActive)
+            if(PlayerMovement.ParryActive == true)
             {
                 pm = other.GetComponent<PlayerMovement>();
                 if(pm != null)
