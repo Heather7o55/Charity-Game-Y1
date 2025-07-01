@@ -1,10 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 public class CustomerTable : Interactable
 {
-    private List<Item> internalItems = new List<Item>();
+
     public override void Interact(Collider col)
     {
         if(Input.GetKey(KeyCode.E))

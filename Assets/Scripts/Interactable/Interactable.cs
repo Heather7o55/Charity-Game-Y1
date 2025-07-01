@@ -7,7 +7,7 @@ public abstract class Interactable : MonoBehaviour
     public List<Item> validItems = new List<Item>();
     public float interactableTimer;
     public bool timerActive;
-    public Item[] InternalItems;
+    public List<Item> internalItems = new List<Item>();
     public Recipe.Station station;
     public static Item empty;
     public static Item sludge;
@@ -38,11 +38,16 @@ public abstract class Interactable : MonoBehaviour
     {
         return item.recipeTables.Any(recipes => recipes.validStations.Any(Station => Station == station));
     }
-    public Item ValidateRecipe(Item[] items)
+    public Item ValidateRecipe()
     {
-        foreach(Recipe recipe in items[0].recipeTables)
+        foreach(Recipe recipe in internalItems[0].recipeTables)
         {
-            if(recipe.requirements == items) return recipe.output;
+            if(recipe.requirements == internalItems.ToArray())
+            {
+                Item tmp = recipe.output;
+                internalItems.Clear();
+                return tmp;
+            } 
         }
         return empty;
     }

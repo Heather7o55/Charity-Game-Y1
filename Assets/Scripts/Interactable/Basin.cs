@@ -7,11 +7,12 @@ public class Basin : Interactable
     public Item item;
     public override void Interact(Collider col)
     {
+        if(internalItems[0] == null) internalItems.Add(item);
         // as stated before interact runs every physics tick so we can in effect use it as a sudo-update, in this case we just  check if the player is holding E and if they are give them the item in the crate.
         if(!Input.GetKey(KeyCode.E)) return;
         if(!ValidatePlayerItem()) return;
-        Item[] itemArray = {PlayerHolding.currentlyHeldItem, item};
-        Item tmpItem = ValidateRecipe(itemArray);
+        internalItems.Add(PlayerHolding.currentlyHeldItem);
+        Item tmpItem = ValidateRecipe();
         PlayerHolding.currentlyHeldItem = (tmpItem == empty) ? PlayerHolding.currentlyHeldItem : tmpItem;
         // foreach(Recipe recipe in localItem.recipeTables)
         // {
@@ -21,5 +22,9 @@ public class Basin : Interactable
         //         (recipe.requirements[1] == item || recipe.requirements[1] == PlayerHolding.currentlyHeldItem))
         //             PlayerHolding.currentlyHeldItem = recipe.output;
         // }
+    }
+    void Start()
+    {
+        internalItems.Add(item);
     }
 }
