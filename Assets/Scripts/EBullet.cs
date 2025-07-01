@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class EBullet : MonoBehaviour
@@ -9,6 +8,7 @@ public class EBullet : MonoBehaviour
     PlayerMovement pm;
     public GameObject ParrySpot;
     public float EBulletSpeed = 30f; 
+    
 
     void Start()
     {
@@ -19,11 +19,13 @@ public class EBullet : MonoBehaviour
         
         if(other.gameObject.CompareTag("Player"))
         {  
-            if(PlayerMovement.ParryActive)
+            if(PlayerMovement.ParryActive == false)
             {
-                GetComponent<Rigidbody>().AddForce(ParrySpot.transform.forward * EBulletSpeed,ForceMode.Impulse);
+                GetComponent<Rigidbody>().velocity = Vector3.zero;
+                
+                GetComponent<Rigidbody>().AddForce(-transform.forward * EBulletSpeed,ForceMode.VelocityChange);
             }
-            if(!PlayerMovement.ParryActive)
+            if(PlayerMovement.ParryActive == true)
             {
                 pm = other.GetComponent<PlayerMovement>();
                 if(pm != null)
