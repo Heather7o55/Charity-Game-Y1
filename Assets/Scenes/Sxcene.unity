@@ -851,6 +851,7 @@ MonoBehaviour:
   EBulletSpeed: 10
   EBulletPrefabSpawn: {fileID: 122406207}
   EBulletPrefab: {fileID: 7066009146848325263}
+  EShootingTimer: 0
 --- !u!1 &1612338089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,12 +1112,12 @@ PrefabInstance:
     - target: {fileID: 7792166279377238555, guid: 8aa79eca287917f49afdfda342fa5f57,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.901
+      value: 6.58
       objectReference: {fileID: 0}
     - target: {fileID: 7792166279377238555, guid: 8aa79eca287917f49afdfda342fa5f57,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.66619
+      value: -5.62
       objectReference: {fileID: 0}
     - target: {fileID: 7792166279377238555, guid: 8aa79eca287917f49afdfda342fa5f57,
         type: 3}
