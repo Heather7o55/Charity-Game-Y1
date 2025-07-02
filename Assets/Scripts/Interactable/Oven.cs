@@ -11,4 +11,11 @@ public class Oven : Interactable
         {
         }
     }
+    void LateUpdate()
+    {
+        if(!timerActive & ValidateRecipeBool())
+        {
+            
+        }
+    }
 }

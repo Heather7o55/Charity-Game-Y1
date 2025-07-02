@@ -51,6 +51,19 @@ public abstract class Interactable : MonoBehaviour
         }
         return empty;
     }
+    public bool ValidateRecipeBool()
+    {
+        foreach(Recipe recipe in internalItems[0].recipeTables)
+        {
+            if(recipe.requirements == internalItems.ToArray())
+            {
+                Item tmp = recipe.output;
+                internalItems.Clear();
+                return true;
+            } 
+        }
+        return false;
+    }
     public IEnumerator StartTimer(float timer)
     {
         // A lot of interactables are going to need timers, hence we have the float, bool, and Enumerator in the BaseInteractable script 
