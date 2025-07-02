@@ -17,6 +17,8 @@ public class PlayerShooting : MonoBehaviour
     void Shoot()
     {
         GameObject bullet = Instantiate(BulletPrefab, BulletPrefabSpawn.position, Quaternion.identity, GameObject.FindGameObjectWithTag("BulletHolder").transform);
+        bullet.GetComponent<PlayerBullet>().item = PlayerHolding.currentlyHeldItem;
+        PlayerHolding.currentlyHeldItem = Interactable.empty;
         bullet.GetComponent<Rigidbody>().AddForce(BulletPrefabSpawn.forward * BulletSpeed,ForceMode.Impulse);
     }
 }
