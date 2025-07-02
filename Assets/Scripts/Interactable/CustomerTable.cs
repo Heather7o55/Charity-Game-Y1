@@ -1,15 +1,17 @@
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEngine;
 public class CustomerTable : Interactable
 {
 
     public override void Interact(Collider col)
     {
-        if(Input.GetKey(KeyCode.E))
+        if(col.CompareTag("PBullet"))
         {
-            if(PlayerHolding.currentlyHeldItem == empty) return;
-            internalItems.Add(PlayerHolding.currentlyHeldItem);
-            PlayerHolding.currentlyHeldItem = empty;
+            if(col.gameObject.GetComponent<PlayerBullet>().item == empty) return;
+            internalItems.Add(col.gameObject.GetComponent<PlayerBullet>().item);
+            col.gameObject.Destroy();
         }
     }
     void LateUpdate()

@@ -13,9 +13,9 @@ public abstract class Interactable : MonoBehaviour
     public static Item sludge;
     private void OnTriggerStay(Collider col)
     {
-        if(!col.CompareTag("Player")) return;
+        if(!col.CompareTag("Player") || !col.CompareTag("PBullet")) return;
         // We do this because the triggers will be overlapping between interactables, this ensures the player can only interact with the one they're looking at
-        if(!IsBeingLookedAt(col.gameObject)) return;
+        if(!IsBeingLookedAt(col.gameObject) || !col.CompareTag("PBullet")) return;
         Debug.Log("interacting");
         // We pass the collider through as it makes extra checks on the interactables script easier (and well possible lmao)
         Interact(col);
