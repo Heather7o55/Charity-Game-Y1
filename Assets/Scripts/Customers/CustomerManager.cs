@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 using UnityEditor;
 using UnityEngine;
 // I don't feel like this script is bad anymore, this is a perfectly reasonable script to make.
-public class CustomerManager : MonoBehaviour
+public class CustomerManager
 {
     // I declare valid items here as it makes sense to the requests for what items are valid be made here
     public static List<Item> validItems = new List<Item>();
