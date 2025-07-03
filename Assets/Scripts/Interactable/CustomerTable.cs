@@ -11,7 +11,7 @@ public class CustomerTable : Interactable
         {
             if(col.gameObject.GetComponent<PlayerBullet>().item == empty) return;
             internalItems.Add(col.gameObject.GetComponent<PlayerBullet>().item);
-            col.gameObject.Destroy();
+            Destroy(col);
         }
     }
     void LateUpdate()

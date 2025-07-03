@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: e50a4bb1c46aaeaa9b972d9c15a53cbb
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: 7d466e1760ebed5249b963e9b4362fa3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Buttons
+    second: {fileID: 2100000, guid: 85d90820325e0f02b81e03bbe5cb6f97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cooktop Frame
+    second: {fileID: 2100000, guid: faf06d182de52d4588042980aacb2b5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Knobs
+    second: {fileID: 2100000, guid: 3efb48f8f53e7a78884f5b88e70b9d17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal Frame
+    second: {fileID: 2100000, guid: 2e48e1bc8c51e8140a66e901a98e381b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Middle Bit
+    second: {fileID: 2100000, guid: f49317a47dd77ccfab6e0b910f7a2c02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Middle Bit Bottom
+    second: {fileID: 2100000, guid: 7df71a059dfcb92bc95954a3e9df92dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: bd44084404509e6d587082b3230e0b1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen Frame
+    second: {fileID: 2100000, guid: 8e3fa5656010d80d3be7f882f9968882, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: benchTop
+    second: {fileID: 2100000, guid: 6d369046bab04bbbeaf7892e5a5ab068, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Base_Base_Color
+    second: {fileID: 2800000, guid: c14b1789a3abecff5a6667d186590e82, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Base_Height
+    second: {fileID: 2800000, guid: c35142d38c761b7b59e7e591303e9353, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Base_Metallic
+    second: {fileID: 2800000, guid: d6d99a827903a14179e4a5ef46b81840, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Base_Normal
+    second: {fileID: 2800000, guid: c6c37a067662cf5a9bce8f9898c8a218, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Base_Roughness
+    second: {fileID: 2800000, guid: c948738d3ee4cbc99a2e962d92272f70, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Buttons_Base_Color
+    second: {fileID: 2800000, guid: 8df491d459ac98dcb902087fa48f1aab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Buttons_Height
+    second: {fileID: 2800000, guid: 947014d361fbf1eb6b0d96849d21fbdf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Buttons_Metallic
+    second: {fileID: 2800000, guid: 86931f8cf68c55b83915bbd87e3b7988, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Buttons_Normal
+    second: {fileID: 2800000, guid: 4e1ece9c60e5fdce78bb9bbbc1f248e8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Buttons_Roughness
+    second: {fileID: 2800000, guid: 9ec19c0289950f6328db7e04d0684bfe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cooktop Frame_Base_Color
+    second: {fileID: 2800000, guid: 641e2f789b45a7339b6fe0e4b9591c50, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cooktop Frame_Height
+    second: {fileID: 2800000, guid: 4bcb925143df714f1b6659dc55f51f4c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cooktop Frame_Metallic
+    second: {fileID: 2800000, guid: 367956c968720d7d3a77211b32d975ff, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cooktop Frame_Normal
+    second: {fileID: 2800000, guid: 523d93f435123891fa2ee0b386ed3f87, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cooktop Frame_Roughness
+    second: {fileID: 2800000, guid: 8aa82d9f875ab59f6ab3c05b133bae35, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Knobs_Base_Color
+    second: {fileID: 2800000, guid: e24f00e33f6e45a1499375ec4186228c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Knobs_Height
+    second: {fileID: 2800000, guid: ab45ab1f007546c418e5a8b3c63f330e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Knobs_Metallic
+    second: {fileID: 2800000, guid: 4547f03c267edbda288d8a4c82bff7bb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Knobs_Normal
+    second: {fileID: 2800000, guid: 7c59a630f34eea1408e4643cb7b44a78, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Knobs_Roughness
+    second: {fileID: 2800000, guid: 5e23730d0cbbe86ef9bdd471ed5b712b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal Frame_Base_Color
+    second: {fileID: 2800000, guid: 3691edbd369ed184c9057f1393aa14e3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal Frame_Height
+    second: {fileID: 2800000, guid: 399bf751eac1e82b399c67936acb55a0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal Frame_Metallic
+    second: {fileID: 2800000, guid: e5f2e02edd437a02b89501fa38077080, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal Frame_Normal
+    second: {fileID: 2800000, guid: 20ad0eb9f7418f28aafdf0fa0612fbc9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal Frame_Roughness
+    second: {fileID: 2800000, guid: f38c2110e8f7b034a8c0e229e0b8ff7f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Middle Bit Bottom_Base_Color
+    second: {fileID: 2800000, guid: ef6fb30687204d874bf187a9e8054d19, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Middle Bit Bottom_Height
+    second: {fileID: 2800000, guid: c48c7ee2a28c8f6feb8e32ca45d804f9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Middle Bit Bottom_Metallic
+    second: {fileID: 2800000, guid: 85395ff8413ac7fbd9ccfac017ace179, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Middle Bit Bottom_Normal
+    second: {fileID: 2800000, guid: 994e254b4059c6ee0b765dc99db79fdf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Middle Bit Bottom_Roughness
+    second: {fileID: 2800000, guid: 3de3caed7b452e45cb75b3361bfca255, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Middle Bit_Base_Color
+    second: {fileID: 2800000, guid: 1693fcae36f8ecca1bba1f519b9b5a61, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Middle Bit_Height
+    second: {fileID: 2800000, guid: d3e82358f6cbf5d569a3965c37b3a3ef, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Middle Bit_Metallic
+    second: {fileID: 2800000, guid: fe1086fe9a4647f4b9e5143c3640f8ce, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Middle Bit_Normal
+    second: {fileID: 2800000, guid: 467074349827affaba65486648aecb2f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Middle Bit_Roughness
+    second: {fileID: 2800000, guid: 09fabb9841ae9a5f48fc8d1b1fbf524a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Screen Frame_Base_Color
+    second: {fileID: 2800000, guid: ac706b0f28aa5fa47b8e62d31966756b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Screen Frame_Height
+    second: {fileID: 2800000, guid: 6cfaf96fd2aa9d111bb90bb18f51ed61, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Screen Frame_Metallic
+    second: {fileID: 2800000, guid: a79643d13302061cdb4409e520be708b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Screen Frame_Normal
+    second: {fileID: 2800000, guid: 1ca36c60293e766cf80ec0a17b744dd9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Screen Frame_Roughness
+    second: {fileID: 2800000, guid: ef673faa14b617358b5f00e2036e6d11, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Screen_Base_Color
+    second: {fileID: 2800000, guid: 27623a0244a6058f38de4d1dfa675977, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Screen_Height
+    second: {fileID: 2800000, guid: 99e5c3e405f15453e8659834e10757f9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Screen_Metallic
+    second: {fileID: 2800000, guid: ffd3113325b13be2ca70587220674431, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Screen_Normal
+    second: {fileID: 2800000, guid: 05f4009a9a8bfdf19926e601032faa02, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Screen_Roughness
+    second: {fileID: 2800000, guid: ab34b7b8c88b3896f836c9a0e5b20dd7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: benchTop_Base_Color
+    second: {fileID: 2800000, guid: f2505836ae4903d1f8545d086cc02241, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: benchTop_Height
+    second: {fileID: 2800000, guid: 01fd5cf56c78bc6cda95a1ce49c3a58e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: benchTop_Metallic
+    second: {fileID: 2800000, guid: 0d346199382197300b6f29d3a83d5140, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: benchTop_Normal
+    second: {fileID: 2800000, guid: b18163f247af014e0b3b99e4a60bab4e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: benchTop_Roughness
+    second: {fileID: 2800000, guid: 62a93db727c03781fb834fb9b02fcfaa, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
